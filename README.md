@@ -17,7 +17,13 @@ Azure App setup:
 
 
 ## Secrets file
-To support my testclient, a secret.json file, application.json or application.development.json is required.  
+To support my testclient
+- secret.json file
+- application.json
+- application.development.json  
+
+One of them is required.  
+
 ```
 {
   "SmtpMe": {
