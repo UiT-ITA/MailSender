@@ -33,8 +33,8 @@ public class SMTPClient
 
     public async Task GetGraphServiceClientMe()
     {
-        var scopes = new[] { "Mail.Send" }; // "Mail.Read", "Mail.Send", "profile", "User.Read" }; // All of the listed
-        Console.WriteLine("Open the link in text, copy code from browser, log in as desired user.");
+        var scopes = new[] { "Mail.Send" }; // This Scope is required
+        Console.WriteLine("Open the link in text, copy code from browser, log in as desired user. Come back here.");
 
         var options = new DeviceCodeCredentialOptions
         {
