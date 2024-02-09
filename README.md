@@ -18,6 +18,7 @@ Azure App setup:
 
 ## Secrets file
 To support my testclient, a secret.json file, application.json or application.development.json is required.  
+```
 {
   "SmtpMe": {
     "TenantId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -32,3 +33,4 @@ To support my testclient, a secret.json file, application.json or application.de
     "ClientSecret": "yoursecret"
   }
 }
+```
