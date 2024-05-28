@@ -13,10 +13,11 @@ public class SMTPService : ISMTPService
         _graphServiceClient = graphServiceClient;
     }
 
-    public static Message MakeMessage(string torecipient, string subject, string body) => MakeMessage(new string[1] { torecipient }, new string[0], new string[0], subject, body, BodyType.Html);
-    public static Message MakeMessage(string[] torecipients, string subject, string body) => MakeMessage(torecipients, new string[0], new string[0], subject, body, BodyType.Html);
-    public static Message MakeMessage(string[] torecipients, string[] ccrecipients, string[] bccrecipients, string subject, string body) => MakeMessage(torecipients, ccrecipients, bccrecipients, subject, body, BodyType.Html);
-    public static Message MakeMessage(string[] torecipients, string[] ccrecipients, string[] bccrecipients, string subject, string body, BodyType bodyType)
+    public Message MakeMessage(string torecipient, string subject, string body) => MakeMessage(new string[1] { torecipient }, new string[0], new string[0], subject, body, BodyType.Html);
+    public Message MakeMessage(string torecipient, string subject, string body, BodyType bodyType) => MakeMessage(new string[1] { torecipient }, new string[0], new string[0], subject, body, bodyType);
+    public Message MakeMessage(string[] torecipients, string subject, string body) => MakeMessage(torecipients, new string[0], new string[0], subject, body, BodyType.Html);
+    public Message MakeMessage(string[] torecipients, string[] ccrecipients, string[] bccrecipients, string subject, string body) => MakeMessage(torecipients, ccrecipients, bccrecipients, subject, body, BodyType.Html);
+    public Message MakeMessage(string[] torecipients, string[] ccrecipients, string[] bccrecipients, string subject, string body, BodyType bodyType)
     {
         // Recipients
         List<Recipient> toRecipients = new();
